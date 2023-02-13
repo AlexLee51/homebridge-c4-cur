@@ -1,0 +1,53 @@
+{
+  "pluginAlias": "Homebridge C4",
+  "pluginType": "platform",
+  "singular": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "required": true,
+        "placeholder": "Homebridge C4"
+      },
+      "host": {
+        "title": "Host",
+        "type": "string",
+        "placeholder": "192.168.1.100",
+        "required": true,
+        "description": "C4 processor IP"
+      },
+      "port": {
+        "title": "Port",
+        "type": "string",
+        "placeholder": "50001",
+        "required": true,
+        "description": "C4 processor control port"
+      },
+       "WindowCovering": {
+        "title": "WindowCovering",
+        "type": "array",
+        "items": {
+          "title": "WindowCovering Configuration",
+          "type": "object",
+          "properties": {
+            "id": {
+              "title": "ID",
+              "type": "number",
+              "placeholder": 1,
+              "minimum": 1,
+              "required": true
+            },
+            "name": {
+              "title": "Name",
+              "type": "string",
+              "placeholder": "WindowCovering",
+              "required": true
+            }
+          }
+        }
+      }
+    }
+  }
+}
